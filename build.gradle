@@ -1,0 +1,31 @@
+plugins {
+    // spring boot plugin 추가
+    id 'org.springframework.boot' version '2.4.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// 프로젝트 개발에 필요한 의존성들을 선언
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest' // rest api 구현을 위한 라이브러리
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // jpa 관련 기능을 사용하기 위한 라이브러리
+
+    runtimeOnly 'com.h2database:h2' // in-memory 관계형 데이터베이스
+
+    // lombok 추가 : 어노테이션 기반으로 코드를 자동완성 해주는 라이브러리
+    annotationProcessor("org.projectlombok:lombok")
+    compileOnly("org.projectlombok:lombok")
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') // test에 필요한 library
+}
+
+test {
+    useJUnitPlatform()
+}
