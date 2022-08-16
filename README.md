@@ -1,5 +1,12 @@
 # todo-server
 
+## SKILLS
+- **Backend**
+    - `JDK 11 (JAVA)`
+    - `Spring-boot`
+- **IDE** : `IntelliJ IDEA`
+    - **build tool** : `gradle`
+
 ## To Do 애플리케이션 서버 요구사항
 **기능 명세**
 - todo 리스트 목록에 아이템을 추가
